@@ -57,8 +57,12 @@ text-decoration: none;
 justify-content: center;
 
 } 
-
+a:hover{ 
+background-color:#bf5700;
+color: white; 
+} 
 a.button:hover {
+color: white; 
   background-color:#bf5700;
 }
 
