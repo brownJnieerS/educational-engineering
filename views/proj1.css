@@ -1,0 +1,451 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 100%;
+  margin: 8px;
+  padding: 0px;
+
+<<<<<<< HEAD
+}
+
+.total {  
+  flex-direction: row;
+  height: 80%;
+  background-color: white;
+  
+}
+
+.header{ 
+  background-color: transparent; 
+  max-width: 100%;
+  height: 80vh; 
+  flex: 1 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  justify-content: center; 
+}
+
+::selection{ 
+  background: #bf5700;
+} 
+.button {
+ 
+
+ display: block;
+ height: 100px;
+ width: 300px;
+ background: #FFFFFF;
+ border: 2px solid rgba(255, 255, 255, 0.59);
+ 
+ 
+
+ color: rgba(0, 0, 0, 0.55);
+ text-align: center;
+ 
+ 
+}
+a.button{ 
+text-decoration: none; 
+justify-content: center;
+
+} 
+a:hover{ 
+background-color:#bf5700;
+color: white; 
+} 
+a.button:hover {
+color: white; 
+  background-color:#bf5700;
+}
+
+.about{ 
+ background-color: transparent; 
+  max-width: 100%;
+  flex: 1 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+ 
+
+} 
+
+/* 3 columns will turn into one on smaller window */ 
+.column {
+    float: left;
+    width: 33.333%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* change when 600px wide or less */ 
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+mark{ /* highlight change */ 
+	background-color: #bf5700;
+	color: white; 
+} 
+
+.links{
+    text-color: black; 
+    align-items: center;
+    justify-content: center; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.links a:hover {
+  background-color: #bf5700;
+}
+
+img{
+	float: left; 
+} 
+
+
+
+
+/* below is fly in text edits */ 
+
+.fly-in-text {
+	font-size: 5px; 
+	justify-content: center; 
+	align-items: center; 
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        top: 51%;
+        transform: translateX(-50%) translateY(-50%);
+}
+
+.fly-in-text li {
+         display: inline-block;
+         margin-right: 50px;
+         font-family: Century Gothic;
+         font-weight: 300;
+         font-size: 3.5em;
+         color: #000; /* black text */ 
+         opacity: 1;
+         transition: all 2.5s ease;
+}
+\.fly-in-text li:last-child {
+         margin-right: 0;
+}
+.fly-in-text.hidden li {
+         opacity: 0;
+}
+
+=======
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 100%;
+  margin: 8px;
+  padding: 0px;
+
+=======
+
+
+
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+}
+
+.total {  
+  flex-direction: row;
+  height: 80%;
+  background-color: white;
+<<<<<<< HEAD
+=======
+  border-style: 0 0 200px rgba(0,0,0,0.9) inset;
+  
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+  
+}
+
+.header{ 
+  background-color: transparent;
+  max-width: 100%;
+  height: 80vh; 
+  flex: 1 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  justify-content: center; 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+}
+
+::selection{ 
+  background: #bf5700;
+} 
+
+/* 3 columns will turn into one on smaller window */ 
+.column {
+    float: left;
+    width: 33.333%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* change when 600px wide or less */ 
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+<<<<<<< HEAD
+mark{ /* highlight change */ 
+	background-color: #bf5700; 
+	color: white; 
+=======
+mark{ /* highlight change, keeping font black  */ 
+	background-color: #bf5700;
+        color: white; 
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+} 
+
+.links{
+    text-color: black; 
+    align-items: center;
+    justify-content: center; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.links a:hover {
+  background-color: #bf5700 ;
+}
+
+img{
+	float: left; 
+} 
+
+
+<<<<<<< HEAD
+
+=======
+.mid{
+	text-color: black; 
+
+} 
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+
+/* below is fly in text edits */ 
+
+.fly-in-text {
+	font-size: 5px; 
+	justify-content: center; 
+	align-items: center; 
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        top: 51%;
+        transform: translateX(-50%) translateY(-50%);
+}
+
+.fly-in-text li {
+         display: inline-block;
+         margin-right: 50px;
+         font-family: Century Gothic;
+         font-weight: 300;
+         font-size: 3.5em;
+         color: #000; /* black text */ 
+         opacity: 1;
+         transition: all 2.5s ease;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+}
+\.fly-in-text li:last-child {
+         margin-right: 0;
+}
+.fly-in-text.hidden li {
+         opacity: 0;
+}
+
+<<<<<<< HEAD
+>>>>>>> 4d890c0884ffb7e7f4f7e17c1ea2a93ce0baa7c6
+.fly-in-text.hidden li:nth-child(1) { transform: translateX(0px) translateY(50px); }
+=======
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 100%;
+  margin: 8px;
+  padding: 0px;
+  
+
+}
+
+.total {  
+  flex-direction: row;
+  height: 80%;
+  background-color: white;
+  
+  
+}
+
+.header{ 
+  background-color: transparent;
+  max-width: 100%;
+  height: 80vh; 
+  flex: 1 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  justify-content: center; 
+}
+
+::selection{ 
+  background: #bf5700;
+} 
+
+/* 3 columns will turn into one on smaller window */ 
+.column {
+    float: left;
+    width: 33.333%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* change when 600px wide or less */ 
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+mark{ 
+/* highlight change */ 
+	background-color: #bf5700; 
+	color: white; 
+
+} 
+
+
+
+
+.links{
+    text-color: black; 
+    align-items: center;
+    justify-content: center; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.links a:hover {
+  background-color: #bf5700;
+}
+
+img{
+	float: left; 
+} 
+
+
+
+
+/* below is fly in text edits */ 
+
+.fly-in-text {
+	font-size: 5px; 
+	justify-content: center; 
+	align-items: center; 
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        top: 51%;
+        transform: translateX(-50%) translateY(-50%);
+}
+
+/* change when 600px wide or less */ 
+@media screen and (max-width: 600px) {
+    .fly-in-text{
+        top: 50%;
+	font-size: 5px;
+	white-space: nowrap; 
+    }
+}
+
+.fly-in-text li {
+         display: inline-block;
+         margin-right: 50px;
+         font-family: Century Gothic;
+         font-weight: 300;
+         font-size: 3.5em;
+         color: #000; /* black text */ 
+         opacity: 1;
+         transition: all 2.5s ease;
+}
+\.fly-in-text li:last-child {
+         margin-right: 0;
+}
+.fly-in-text.hidden li {
+         opacity: 0;
+}
+
+.fly-in-text.hidden li:nth-child(1) { transform: translateX(0px) translateY(50px); }
+>>>>>>> 7527c82e5a33a437f9ca13a6c3a658112a3fa05e
+=======
+.fly-in-text.hidden li:nth-child(1) { transform: translateX(0px) translateY(50px); }
+
+.vig {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 45px rgba(0,0,0,0.9) ; 
+}
+
+p.smol {
+    line-height: .5;
+    text-align: center; 
+}
+
+h1.title{ 
+	text-align: center; 
+	background-color: #bf5700; 
+	color: white; 
+} 
+
+p.pls:hover{ 
+	background-color: #bf5700;
+} 
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+
+
