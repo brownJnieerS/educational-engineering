@@ -18,6 +18,7 @@
   "homepage": "https://github.com/browngineers/educational-engineering#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
     "sockets": "^0.4.2"
   },
   "devDependencies": {},
