@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
 
 
 app.get('/student-login', function(req, res) {
-  res.render('studentLogin')
+  res.render('loginPage')
   // retrieves from database
 })
 
