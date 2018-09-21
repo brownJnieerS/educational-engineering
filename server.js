@@ -5,9 +5,9 @@ const app = express()
 // mongoDB
 var mongoose = require('mongoose');
 var Question = require('./models.js').Question
-var connect = process.env.MONGODB_URI;
 
-mongoose.connect(connect, function(err) {
+
+mongoose.connect("mongodb://browngineerz:cocomo12@ds261332.mlab.com:61332/questionable", function(err) {
   if(err) console.log('There was an error', err);
   else console.log('Connected :)');
 });
