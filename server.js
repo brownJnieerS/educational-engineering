@@ -4,6 +4,7 @@ const app = express()
 
 // mongoDB
 var mongoose = require('mongoose');
+var Question = require('./models.js').Question
 var connect = process.env.MONGODB_URI;
 
 mongoose.connect(connect, function(err) {
@@ -28,15 +29,31 @@ app.get('/', function(req, res) {
   res.render('homePage', {tickets: tickets})
 })
 
-
-
 app.get('/student-login', function(req, res) {
   res.render('loginPage')
-  // retrieves from database
 })
 
 app.get('/teacher-login', function(req, res) {
     res.render('teacherLogin')
+})
+
+app.get('/student-questions', function(req, res) {
+    // query mongodb for questions
+    Question.find({}, function(error, questions) {
+        questionArray = questions.map(function(questionObject) {
+            return questionObject.question
+        })
+    res.render('studentQuestions', {questions: questionArray})
+    })
+
+})
+
+app.post('/submit-question', function(req, res) {
+    // here would be logic to submit questions to mongoDB
+})
+
+app.post('/answer-question', function(req, res) {
+
 })
 
 
