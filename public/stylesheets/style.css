@@ -205,68 +205,7 @@ html, body {
 mark{ /* highlight change */
 	background-color: #bf5700;
 	color: white;
-=======
-mark{ /* highlight change, keeping font black  */
-	background-color: #bf5700;
-        color: white;
-}
 
-.links{
-    text-color: black;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.links a:hover {
-  background-color: #bf5700 ;
-}
-
-img{
-	float: left;
-}
-
-
-.mid{
-	text-color: black;
-
-}
-
-
-/* below is fly in text edits */
-
-.fly-in-text {
-	font-size: 5px;
-	justify-content: center;
-	align-items: center;
-        list-style: none;
-        position: absolute;
-        left: 50%;
-        top: 51%;
-        transform: translateX(-50%) translateY(-50%);
-}
-
-.fly-in-text li {
-         display: inline-block;
-         margin-right: 50px;
-         font-family: Century Gothic;
-         font-weight: 300;
-         font-size: 3.5em;
-         color: #000; /* black text */
-         opacity: 1;
-         transition: all 2.5s ease;
-
-}
-.fly-in-text li:last-child {
-         margin-right: 0;
-}
-.fly-in-text.hidden li {
-         opacity: 0;
-}
-
-.fly-in-text.hidden li:nth-child(1) { transform: translateX(0px) translateY(50px); }
-=======
 html, body {
   display: flex;
   align-items: center;
