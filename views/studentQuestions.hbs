@@ -5,12 +5,11 @@
   </head>
 <body>
 
-  <form>
-    <label><b>Submit your question(s):</b><br/></label>
-    <textarea name="questions" rows="10" cols="60" id="user_input"></textarea>
-    <!--input type="text" name="message" id="user_input"-->
+  <form action="/submit-question" method="POST" id="question_submit">
+    <label><b>Submit a question:</b><br/></label>
+    <textarea form="question_submit" name="question" rows="10" cols="60" ></textarea>
+    <input type="submit"><br/>
   </form>
-  <input type="submit" onclick="showInput();"><br/>
   <p><label>Questions Queue: </label></p>
   {{#each questions}}
     <p>{{this}}</p>

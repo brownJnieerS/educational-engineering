@@ -22,7 +22,7 @@
           const auth = firebase.auth()
           // Sign in
           const promise = auth.signInWithEmailAndPassword(email, password)
+          promise.catch(e => console.log(e.message))
           
-
       })
 }());

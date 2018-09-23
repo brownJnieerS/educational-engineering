@@ -20,7 +20,7 @@
           const email = emailText.value
           const password = passwordText.value
           const auth = firebase.auth()
-          // Sign in
+          // Sign up
           const promise = auth.createUserWithEmailAndPassword(email, password)
           promise.catch(e => console.log(e.message))
 
