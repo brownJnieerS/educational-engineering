@@ -60,18 +60,8 @@ app.post('/auth', function(req, res) {
     const password = req.body.password
     // Sign in
     const promise = auth.signInWithEmailAndPassword(user, password)
-    promise.catch(e => res.render('loginPage'))
-    auth.onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          res.render('teacherQuestions')
-          // ...
-        } else {
-          // User is signed out.
-          res.render('loginPage')
-        }   
-      })
-   
+    promise.catch(e => res.redirect('loginPage'))
+    
     // res.render('teacherQuestions')
     // @MEHUL logic here
     // IF LOGIN WORKS then res.redirect to '/teacher-login'
