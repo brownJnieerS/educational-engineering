@@ -47,10 +47,7 @@ app.get('/', function(req, res) {
 app.get('/student-questions', function(req, res) {
     // query mongodb for questions
     Question.find({}, function(error, questions) {
-        questionArray = questions.map(function(questionObject) {
-            return questionObject.question
-        })
-    res.render('studentQuestions', {questions: questionArray})
+        res.render('studentQuestions', {questions: questions})
     })
 })
 
@@ -67,7 +64,7 @@ app.post('/auth', function(req, res) {
             res.redirect('/teacher-questions'); //After successful login, user will be redirected to teacher view
         }
       });
-    
+
     // res.render('teacherQuestions')
     // @MEHUL logic here
     // IF LOGIN WORKS then res.redirect to '/teacher-login'
@@ -96,12 +93,14 @@ app.get('/teacher-signup', function(req, res) {
 })
 
 app.get('/teacher-questions', function(req, res) {
-    
+
     const auth = firebase.auth()
     auth.onAuthStateChanged(function(user) {
         if (user) {
-          // User is signed in.
-          res.render('teacherQuestions')
+            // query mongodb for questions
+            Question.find({}, function(error, questions) {
+                res.render('teacherQuestions', {questions: questions})
+            })
         } else {
           // User is signed out and must sign in again
           res.redirect('/teacher-login')
@@ -124,12 +123,15 @@ app.post('/submit-question', function(req, res) {
     const question = req.body.question
     const newQuestion = new Question({question: question, answer: ''})
     newQuestion.save()
-    res.send(200)
-
 })
 
-app.post('/answer-question', function(req, res) {
-
+app.post('/answer-question/:id', function(req, res) {
+    const id = req.params.id
+    const answer = req.body.answer
+    Question.findById(id, function(err, question) {
+        question.answer = answer
+        question.save()
+    })
 })
 
 
