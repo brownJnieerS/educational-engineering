@@ -61,6 +61,18 @@ app.post('/auth', function(req, res) {
     // Sign in
     const promise = auth.signInWithEmailAndPassword(user, password)
     promise.catch(e => res.render('loginPage'))
+    auth.onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          res.render('teacherQuestions')
+          // ...
+        } else {
+          // User is signed out.
+          res.render('loginPage')
+        }   
+      })
+   
+    // res.render('teacherQuestions')
     // @MEHUL logic here
     // IF LOGIN WORKS then res.redirect to '/teacher-login'
     // IF LOGIN FAILS then redirect them back to login page
@@ -85,6 +97,10 @@ app.get('/teacher-login', function(req, res) {
 
 app.get('/teacher-signup', function(req, res) {
     res.render('signUpPage')
+})
+
+app.get('/teacher-questions', function(req, res) {
+    res.render('teacherQuestions')
 })
 
 app.get('/student-questions', function(req, res) {
