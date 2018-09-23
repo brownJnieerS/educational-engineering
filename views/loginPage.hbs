@@ -5,15 +5,16 @@
 <body>
     <div class="loginbox">
     <img src="/avatar.png" class ="avatar">
-        <h1>Login Here</h1>
-            <p>Username</p>
-            <input id="user" type="text" name="" placeholder="Enter E-mail">
-            <p>Password</p>
-            <input id="password" type="password" name="" placeholder="Enter Password">
-            <input id="loginButton" type="submit" name="" value="Login">
-            <a href="#">Lost your password?</a><br>
-            <a href="#">Don't have an account?</a>
-            
+        <form id="login" action="/auth" method="post">
+            <h1>Login Here</h1>
+                <p>Username</p>
+                <input id="user" type="text" name="user" placeholder="Enter E-mail">
+                <p>Password</p>
+                <input id="password" type="password" name="password" placeholder="Enter Password">
+                <input id="loginButton" type="submit" name="" value="Login">
+                <a href="#">Lost your password?</a><br>
+                <a href="#">Don't have an account?</a>
+        </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
     <script src="/scripts/loginApp.js"></script>

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
+const firebase = require('firebase')
 const app = express()
 
 // mongoDB
@@ -17,6 +18,9 @@ var config = {
   storageBucket: "software-engineering-project-1.appspot.com",
   messagingSenderId: "495472687615"
 }
+
+firebase.initializeApp(config);
+
 
 
 mongoose.connect("mongodb://browngineerz:cocomo12@ds261332.mlab.com:61332/questionable", function(err) {
@@ -54,8 +58,13 @@ app.get('/student-questions', function(req, res) {
 
 app.post('/auth', function(req, res) {
     const auth = firebase.auth()
+    const user = req.body.user
+    const password = req.body.password
     // Sign in
-    const promise = auth.signInWithEmailAndPassword(email, password)
+    const promise = auth.signInWithEmailAndPassword(user, password)
+    // @MEHUL logic here
+    // IF LOGIN WORKS then res.redirect to '/teacher-login'
+    // IF LOGIN FAILS then redirect them back to login page
 })
 
 app.get('/teacher-login', function(req, res) {
