@@ -7,8 +7,6 @@ const app = express()
 var mongoose = require('mongoose');
 var Question = require('./models.js').Question
 
-
-
 var config = {
   apiKey: "AIzaSyAn_1ljl18uTo-2fuOLeT5aMXNmAwGU47U",
   authDomain: "software-engineering-project-1.firebaseapp.com",
@@ -60,6 +58,10 @@ app.post('/auth', function(req, res) {
 
 app.get('/teacher-login', function(req, res) {
     res.render('loginPage')
+})
+
+app.get('/teacher-signup', function(req, res) {
+    res.render('signUpPage')
 })
 
 app.get('/student-questions', function(req, res) {
