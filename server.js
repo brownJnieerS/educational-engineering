@@ -60,7 +60,13 @@ app.post('/auth', function(req, res) {
     const password = req.body.password
     // Sign in
     const promise = auth.signInWithEmailAndPassword(user, password)
-    promise.catch(e => res.redirect('loginPage'))
+    promise.catch(e => res.redirect('/teacher-login'))
+
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            res.redirect('/teacher-questions'); //After successful login, user will be redirected to teacher view
+        }
+      });
     
     // res.render('teacherQuestions')
     // @MEHUL logic here
@@ -90,7 +96,17 @@ app.get('/teacher-signup', function(req, res) {
 })
 
 app.get('/teacher-questions', function(req, res) {
-    res.render('teacherQuestions')
+    
+    const auth = firebase.auth()
+    auth.onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          res.render('teacherQuestions')
+        } else {
+          // User is signed out and must sign in again
+          res.redirect('/teacher-login')
+        }
+      })
 })
 
 app.get('/student-questions', function(req, res) {
