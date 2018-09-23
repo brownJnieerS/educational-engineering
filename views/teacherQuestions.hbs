@@ -1,1 +1,13 @@
 <h1>The teacher view</h1>
+<h2>Questions</h2>
+{{#each questions}}
+    <b><p>{{this.question}}</p></b>
+    {{#if this.answer}}
+        <p>Answer: {{this.answer}}</p>
+    {{else }}
+    <form action="/answer-question/{{this._id}}" method="post">
+        <input name="answer"></input>
+        <input type="submit"></input>
+    </form>
+    {{/if}}
+{{/each}}
