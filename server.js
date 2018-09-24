@@ -123,6 +123,7 @@ app.post('/submit-question', function(req, res) {
     const question = req.body.question
     const newQuestion = new Question({question: question, answer: ''})
     newQuestion.save()
+    res.redirect('/student-questions')
 })
 
 app.post('/answer-question/:id', function(req, res) {
@@ -131,11 +132,13 @@ app.post('/answer-question/:id', function(req, res) {
     Question.findById(id, function(err, question) {
         question.answer = answer
         question.save()
+        res.redirect('/teacher-questions')
     })
 })
 
 app.post('/upload', function(req, res) {
     console.log(req.files.fileData);
+    res.redirect('/student-questions')
 })
 
 
