@@ -1,13 +1,40 @@
-<h1>The teacher view</h1>
-<h2>Questions</h2>
-{{#each questions}}
-    <b><p>{{this.question}}</p></b>
-    {{#if this.answer}}
-        <p>Answer: {{this.answer}}</p>
-    {{else }}
-    <form action="/answer-question/{{this._id}}" method="post">
-        <input name="answer"></input>
-        <input type="submit"></input>
-    </form>
-    {{/if}}
-{{/each}}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CS329E Teacher View</title>
+	<link rel="stylesheet" type="text/css" href="/teacherQuestions.css">
+	<link rel="icon" href="tpic.png">
+</head>
+
+<body>
+
+<div class='total'>
+<!-- a new black should pop up when a student sends a question -->
+<div id='block'>
+	<h1>The teacher view</h1>
+	<h2>Questions</h2>
+	{{#each questions}}
+	    <b><p>{{this.question}}</p></b>
+	    {{#if this.answer}}
+	        <p>Answer: {{this.answer}}</p>
+	    {{else }}
+	    <form action="/answer-question/{{this._id}}" method="post">
+	        <input name="answer"></input>
+	        <input type="submit"></input>
+	    </form>
+	    {{/if}}
+	{{/each}}
+</div>
+
+
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>
