@@ -1,5 +1,6 @@
 # How to run.
 
-1. git clone https://github.com/browngineers/educational-engineering.git
-2. npm install
-3. npm start
+1. Install npm: https://nodejs.org/en/
+2. git clone https://github.com/browngineers/educational-engineering.git
+2. npm install (make sure you are in the educational-engineering folder)
+3. npm start (make sure you are in the educational-engineering folder)
