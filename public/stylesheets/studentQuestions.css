@@ -1,0 +1,28 @@
+html{
+	margin: 200px;
+	border: none;
+	padding:50px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: url(marble.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+div{
+	position: relative;
+	top: -210px;
+	left: 650px;
+}
+
+*.first{
+	position: relative;
+	top: -50px;
+	font-family: Arial;
+	font-size: 24pt;
+	font-style: italic;
+	text-align: center;
+}
