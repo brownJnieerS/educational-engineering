@@ -1,8 +1,11 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const fileUpload = require('express-fileupload');
 const firebase = require('firebase')
 const app = express()
+
+
 
 // mongoDB
 var mongoose = require('mongoose');
@@ -37,6 +40,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(fileUpload());
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -64,12 +70,6 @@ app.post('/auth', function(req, res) {
             res.redirect('/teacher-questions'); //After successful login, user will be redirected to teacher view
         }
       });
-
-    // res.render('teacherQuestions')
-    // @MEHUL logic here
-    // IF LOGIN WORKS then res.redirect to '/teacher-login'
-    // IF LOGIN FAILS then redirect them back to login page
-    // homie i got us this logic gucci
 })
 
 app.post('/signupaccount', function(req, res) {
@@ -132,6 +132,10 @@ app.post('/answer-question/:id', function(req, res) {
         question.answer = answer
         question.save()
     })
+})
+
+app.post('/upload', function(req, res) {
+    console.log(req.files.fileData);
 })
 
 

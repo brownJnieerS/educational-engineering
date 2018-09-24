@@ -4,12 +4,19 @@
   <meta charset="UTF-8">
   </head>
 <body>
-
   <form action="/submit-question" method="POST" id="question_submit">
     <label><b>Submit a question:</b><br/></label>
     <textarea form="question_submit" name="question" rows="10" cols="60" ></textarea>
     <input type="submit"><br/>
   </form>
+  <form ref='uploadForm'
+      id='uploadForm'
+      action='/upload'
+      method='post'
+      encType="multipart/form-data">
+        <input type="file" name="fileData" />
+        <input type='submit' value='Submit homework here (pdf, text)!' />
+    </form>
   <p><label>Questions Queue: </label></p>
   {{#each questions}}
     <b><p>{{this.question}}</p></b>
