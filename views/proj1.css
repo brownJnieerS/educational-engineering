@@ -1,0 +1,90 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc46329e6c777e528dbd255b8734bf0577afc341
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 100%;
+  margin: 8px;
+  padding: 0px;
+
+<<<<<<< HEAD
+}
+
+.total {  
+  flex-direction: row;
+  height: 80%;
+  background-color: white;
+  
+}
+
+.header{ 
+  background-color: transparent; 
+  max-width: 100%;
+  height: 80vh; 
+  flex: 1 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  justify-content: center; 
+}
+
+::selection{ 
+  background: #bf5700;
+} 
+.button {
+ 
+
+ display: block;
+ height: 100px;
+ width: 300px;
+ background: #FFFFFF;
+ border: 2px solid rgba(255, 255, 255, 0.59);
+ 
+ 
+
+ color: rgba(0, 0, 0, 0.55);
+ text-align: center;
+ 
+ 
+}
+a.button{ 
+text-decoration: none; 
+justify-content: center;
+
+} 
+a:hover{ 
+background-color:#bf5700;
+color: white; 
+} 
+a.button:hover {
+color: white; 
+  background-color:#bf5700;
+}
+
+.about{ 
+ background-color: transparent; 
+  max-width: 100%;
+  flex: 1 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+ 
+
+} 
+
+
+
+mark{ /* highlight change */ 
+	color: white; 
+	background-color: #bf5700; 
+} 
+
+p::selection{ 
+ color: white; 
+} 
